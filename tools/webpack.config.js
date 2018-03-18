@@ -20,7 +20,7 @@ const isVerbose = process.argv.includes('--verbose');
 const isAnalyze =
   process.argv.includes('--analyze') || process.argv.includes('--analyse');
 
-const reScript = /\.(js|jsx|mjs)$/;
+const reScript = /\.(js|jsx|mjs|ejs)$/;
 const reStyle = /\.(css|less|styl|scss|sass|sss)$/;
 const reImage = /\.(bmp|gif|jpg|jpeg|png|svg)$/;
 const staticAssetName = isDebug
@@ -56,7 +56,7 @@ const config = {
   resolve: {
     // Allow absolute paths in imports, e.g. import Button from 'components/Button'
     // Keep in sync with .flowconfig and .eslintrc
-    modules: ['node_modules', 'src'],
+    modules: ['node_modules', path.resolve(__dirname, 'src')],
   },
 
   module: {

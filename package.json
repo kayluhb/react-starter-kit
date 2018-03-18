@@ -51,6 +51,8 @@
     "@babel/preset-flow": "7.0.0-beta.39",
     "@babel/preset-react": "7.0.0-beta.39",
     "@babel/preset-stage-2": "7.0.0-beta.39",
+    "@babel/register": "^7.0.0-beta.42",
+    "@storybook/react": "^3.3.15",
     "assets-webpack-plugin": "^3.5.1",
     "autoprefixer": "^7.2.3",
     "babel-core": "^7.0.0-0",
@@ -79,6 +81,7 @@
     "glob": "^7.1.2",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
+    "isomorphic-fetch": "^2.2.1",
     "jest": "^22.0.4",
     "lint-staged": "^6.0.0",
     "markdown-it": "^8.4.0",
@@ -147,6 +150,7 @@
     "deploy": "babel-node tools/run deploy",
     "render": "babel-node tools/run render",
     "serve": "babel-node tools/run runServer",
-    "start": "babel-node tools/run start"
+    "start": "babel-node tools/run start",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   }
 }
